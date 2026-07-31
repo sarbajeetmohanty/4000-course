@@ -151,7 +151,7 @@ function TimerChip({ value, label }: { value: string; label: string }) {
 }
 
 function LandingPage() {
-  const timer = useCountdown(10 * 60);
+  
   const [openFaq, setOpenFaq] = useState<number | null>(0);
 
   const [showExit, setShowExit] = useState(false);
@@ -163,20 +163,7 @@ function LandingPage() {
 
   return (
     <main className="min-h-screen bg-background text-foreground">
-      {/* Announcement bar */}
-      <div className="sticky top-0 z-30 border-b border-border bg-surface/95 backdrop-blur">
-        <div className="mx-auto flex max-w-5xl flex-wrap items-center justify-center gap-x-4 gap-y-2 px-4 py-2.5 text-center">
-          <span className="text-xs font-bold uppercase tracking-wider text-primary sm:text-sm">
-            ⚡ Mega Sale Live — Lifetime Access at ₹99
-          </span>
-          <span className="hidden h-4 w-px bg-border sm:block" />
-          <span className="flex items-center gap-1.5">
-            <TimerChip value={timer.h} label="Hrs" />
-            <TimerChip value={timer.m} label="Min" />
-            <TimerChip value={timer.s} label="Sec" />
-          </span>
-        </div>
-      </div>
+
 
       {/* Hero */}
       <section className="relative overflow-hidden px-4 pb-20 pt-14">
