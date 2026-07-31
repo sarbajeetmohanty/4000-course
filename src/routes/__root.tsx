@@ -77,14 +77,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "4000+ Premium Courses | Lifetime Access at ₹99" },
+      { name: "description", content: "Unlock 4000+ Elite Premium Courses for the Price of One Cutting Chai. Master AI, Business, Coding, Marketing, and more." },
+      { name: "author", content: "Ultimate Course Bundle" },
+      { property: "og:title", content: "4000+ Premium Courses | Lifetime Access at ₹99" },
+      { property: "og:description", content: "Unlock 4000+ Elite Premium Courses for the Price of One Cutting Chai. Master AI, Business, Coding, Marketing, and more." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:site", content: "@PremiumCourses" },
     ],
     links: [
       {

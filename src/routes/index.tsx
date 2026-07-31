@@ -157,8 +157,13 @@ function LandingPage() {
   const [showExit, setShowExit] = useState(false);
 
   useEffect(() => {
-    const t = setTimeout(() => setShowExit(true), 20000);
-    return () => clearTimeout(t);
+    const handleMouseLeave = (e: MouseEvent) => {
+      if (e.clientY <= 0) {
+        setShowExit(true);
+      }
+    };
+    document.addEventListener("mouseleave", handleMouseLeave);
+    return () => document.removeEventListener("mouseleave", handleMouseLeave);
   }, []);
 
   return (
@@ -184,6 +189,7 @@ function LandingPage() {
               alt="A glass of Indian masala chai"
               width={768}
               height={768}
+              loading="lazy"
               className="ml-2 inline-block h-20 w-20 align-middle sm:h-28 sm:w-28 drop-shadow-[0_6px_18px_rgba(0,0,0,0.5)]"
             />
           </h1>
@@ -193,8 +199,8 @@ function LandingPage() {
           </p>
 
           <div className="mt-8 flex items-center justify-center gap-4">
-            <span className="text-xl text-muted-foreground line-through">₹3,799</span>
-            <span className="text-5xl font-extrabold text-primary">₹99 only</span>
+            <span className="text-xl text-muted-foreground line-through">₹4,999</span>
+            <span className="text-4xl sm:text-5xl font-extrabold text-primary">₹99 only</span>
           </div>
           <p className="mt-3 text-sm font-semibold text-gold">
             🔥 97% OFF — ₹99 Offer • Valid This Today Only ⏰
@@ -448,7 +454,7 @@ function LandingPage() {
 
       {/* Chat support */}
       <a
-        href="https://wa.me/910000000000"
+        href="https://wa.me/919999999999"
         className="fixed bottom-6 right-6 z-40 flex items-center justify-center gap-2 rounded-full bg-gradient-brand px-5 py-3 text-sm font-bold text-primary-foreground shadow-glow"
       >
         <svg
