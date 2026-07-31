@@ -47,12 +47,15 @@ export const TopBar = () => {
           </div>
         </div>
 
-        <button 
-          className="bg-gradient-to-r from-green-500 to-emerald-400 hover:from-green-400 hover:to-emerald-300 text-black font-extrabold text-sm sm:text-base py-2 px-6 rounded-full shadow-[0_0_15px_rgba(34,197,94,0.4)] hover:shadow-[0_0_25px_rgba(34,197,94,0.6)] transition-all animate-pulse transform hover:scale-105"
-          onClick={() => document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' })}
-        >
-          CLAIM OFFER
-        </button>
+        <div className="flex flex-col items-center justify-center">
+          <button 
+            className="bg-gradient-to-r from-green-500 to-emerald-400 hover:from-green-400 hover:to-emerald-300 text-black font-extrabold text-sm sm:text-base py-2 px-6 rounded-full shadow-[0_0_15px_rgba(34,197,94,0.4)] hover:shadow-[0_0_25px_rgba(34,197,94,0.6)] transition-all animate-pulse transform hover:scale-105"
+            onClick={() => document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' })}
+          >
+            CLAIM OFFER
+          </button>
+          <span className="text-[10px] text-red-400 font-bold mt-1 tracking-wide animate-pulse">🔥 ONLY 7 SPOTS LEFT!</span>
+        </div>
       </div>
 
     </div>

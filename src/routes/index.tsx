@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import chaiImg from "@/assets/chai.png";
 import { TopBar } from "@/components/TopBar";
 import { FloatingFomo } from "@/components/FloatingFomo";
+import { StickyBottomBar } from "@/components/StickyBottomBar";
 
 
 export const Route = createFileRoute("/")({
@@ -162,9 +163,12 @@ function LandingPage() {
   }, []);
 
   return (
-    <main className="min-h-screen bg-background text-foreground">
+    <main className="min-h-screen bg-background text-foreground pb-16">
       <TopBar />
-      <FloatingFomo />      {/* Hero */}
+      <FloatingFomo />
+      <StickyBottomBar />
+      
+      {/* Hero */}
       <section className="relative overflow-hidden px-4 pb-20 pt-14">
         <div
           aria-hidden
