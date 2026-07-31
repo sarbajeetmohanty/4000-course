@@ -151,7 +151,7 @@ function TimerChip({ value, label }: { value: string; label: string }) {
 }
 
 function LandingPage() {
-  const timer = useCountdown(24 * 3600);
+  const timer = useCountdown(10 * 60);
   const [openFaq, setOpenFaq] = useState<number | null>(0);
 
   const [showExit, setShowExit] = useState(false);
