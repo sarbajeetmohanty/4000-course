@@ -1,6 +1,9 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import chaiImg from "@/assets/chai.png";
+import { TopBar } from "@/components/TopBar";
+import { FloatingFomo } from "@/components/FloatingFomo";
+
 
 export const Route = createFileRoute("/")({
   head: () => ({
