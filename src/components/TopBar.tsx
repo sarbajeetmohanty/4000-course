@@ -10,19 +10,41 @@ export const TopBar = () => {
     return () => clearInterval(timer);
   }, []);
 
-  const minutes = Math.floor(timeLeft / 60);
+  const hours = Math.floor(timeLeft / 3600);
+  const minutes = Math.floor((timeLeft % 3600) / 60);
   const seconds = timeLeft % 60;
   
   return (
-    <div className="bg-gradient-to-r from-orange-500 to-red-600 text-white text-center py-2 px-4 text-sm font-semibold tracking-wide shadow-md sticky top-0 z-50 flex items-center justify-center gap-2 flex-wrap">
-      <span>⚡ MEGA SALE IS LIVE</span>
-      <span className="hidden sm:inline">|</span>
-      <span>Get Lifetime Access at ₹99 now</span>
-      <span className="hidden sm:inline">|</span>
-      <span className="font-mono bg-black/20 px-2 py-0.5 rounded">
-        {String(minutes).padStart(2, '0')}:{String(seconds).padStart(2, '0')}
-      </span>
-      <span>left</span>
+    <div className="bg-[#111322] text-white py-3 px-4 w-full sticky top-0 z-50 flex items-center justify-center gap-6 shadow-md">
+      
+      <div className="flex items-center text-orange-500 font-extrabold text-sm sm:text-base tracking-wide">
+        <span className="mr-2 text-xl">⚡</span>
+        MEGA SALE LIVE — LIFETIME ACCESS AT ₹99
+      </div>
+
+      <div className="hidden sm:block h-8 w-px bg-slate-700"></div>
+
+      <div className="flex items-center gap-3">
+        <div className="flex flex-col items-center">
+          <div className="bg-[#1c1f37] rounded-xl w-12 h-12 flex items-center justify-center text-yellow-400 font-bold text-xl">
+            {String(hours).padStart(2, '0')}
+          </div>
+          <span className="text-[10px] text-slate-400 mt-1 font-medium">HRS</span>
+        </div>
+        <div className="flex flex-col items-center">
+          <div className="bg-[#1c1f37] rounded-xl w-12 h-12 flex items-center justify-center text-yellow-400 font-bold text-xl">
+            {String(minutes).padStart(2, '0')}
+          </div>
+          <span className="text-[10px] text-slate-400 mt-1 font-medium">MIN</span>
+        </div>
+        <div className="flex flex-col items-center">
+          <div className="bg-[#1c1f37] rounded-xl w-12 h-12 flex items-center justify-center text-yellow-400 font-bold text-xl">
+            {String(seconds).padStart(2, '0')}
+          </div>
+          <span className="text-[10px] text-slate-400 mt-1 font-medium">SEC</span>
+        </div>
+      </div>
+
     </div>
   );
 };
