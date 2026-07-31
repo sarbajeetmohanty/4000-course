@@ -3,7 +3,6 @@ import { useEffect, useState } from "react";
 import chaiImg from "@/assets/chai.png";
 import { TopBar } from "@/components/TopBar";
 import { FloatingFomo } from "@/components/FloatingFomo";
-import { StickyBottomBar } from "@/components/StickyBottomBar";
 
 
 export const Route = createFileRoute("/")({
@@ -163,10 +162,9 @@ function LandingPage() {
   }, []);
 
   return (
-    <main className="min-h-screen bg-background text-foreground pb-16">
+    <main className="min-h-screen bg-background text-foreground">
       <TopBar />
       <FloatingFomo />
-      <StickyBottomBar />
       
       {/* Hero */}
       <section className="relative overflow-hidden px-4 pb-20 pt-14">
@@ -451,7 +449,7 @@ function LandingPage() {
       {/* Chat support */}
       <a
         href="https://wa.me/910000000000"
-        className="fixed bottom-24 sm:bottom-6 right-4 sm:right-6 z-[60] flex items-center justify-center gap-2 rounded-full bg-gradient-brand px-5 py-3 text-sm font-bold text-primary-foreground shadow-glow"
+        className="fixed bottom-6 right-6 z-40 flex items-center justify-center gap-2 rounded-full bg-gradient-brand px-5 py-3 text-sm font-bold text-primary-foreground shadow-glow"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"

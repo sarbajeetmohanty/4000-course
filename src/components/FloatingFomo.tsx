@@ -14,6 +14,7 @@ export const FloatingFomo = () => {
       const time = Math.floor(Math.random() * 10) + 1;
       setBuyer({ name, city, time });
       setVisible(true);
+      window.dispatchEvent(new Event("fomo_purchase"));
       
       setTimeout(() => {
         setVisible(false);
@@ -32,7 +33,7 @@ export const FloatingFomo = () => {
   if (!visible) return null;
 
   return (
-    <div className="fixed bottom-40 sm:bottom-24 right-4 sm:right-8 bg-white border border-gray-200 shadow-2xl rounded-xl p-4 flex items-start gap-3 z-[45] animate-in slide-in-from-right-8 fade-in duration-500 max-w-xs">
+    <div className="fixed bottom-24 right-4 sm:right-8 bg-white border border-gray-200 shadow-2xl rounded-xl p-4 flex items-start gap-3 z-50 animate-in slide-in-from-right-8 fade-in duration-500 max-w-xs">
       <div className="text-2xl">🚀</div>
       <div className="flex-1">
         <p className="text-sm text-gray-800 font-medium leading-tight">

@@ -2,12 +2,21 @@ import { useEffect, useState } from "react";
 
 export const TopBar = () => {
   const [timeLeft, setTimeLeft] = useState(10 * 60);
+  const [spotsLeft, setSpotsLeft] = useState(7);
 
   useEffect(() => {
     const timer = setInterval(() => {
       setTimeLeft((prev) => (prev <= 0 ? 10 * 60 : prev - 1));
     }, 1000);
     return () => clearInterval(timer);
+  }, []);
+
+  useEffect(() => {
+    const handlePurchase = () => {
+      setSpotsLeft((prev) => (prev > 2 ? prev - 1 : prev));
+    };
+    window.addEventListener("fomo_purchase", handlePurchase);
+    return () => window.removeEventListener("fomo_purchase", handlePurchase);
   }, []);
 
   const hours = Math.floor(timeLeft / 3600);
@@ -54,7 +63,7 @@ export const TopBar = () => {
           >
             CLAIM OFFER
           </button>
-          <span className="text-[10px] text-red-400 font-bold mt-1 tracking-wide animate-pulse">🔥 ONLY 7 SPOTS LEFT!</span>
+          <span className="text-[10px] text-red-400 font-bold mt-1 tracking-wide animate-pulse">🔥 ONLY {spotsLeft} SPOTS LEFT!</span>
         </div>
       </div>
 
