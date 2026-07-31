@@ -451,7 +451,7 @@ function LandingPage() {
       {/* Chat support */}
       <a
         href="https://wa.me/910000000000"
-        className="fixed bottom-6 right-6 z-40 flex items-center justify-center gap-2 rounded-full bg-gradient-brand px-5 py-3 text-sm font-bold text-primary-foreground shadow-glow"
+        className="fixed bottom-24 sm:bottom-6 right-4 sm:right-6 z-[60] flex items-center justify-center gap-2 rounded-full bg-gradient-brand px-5 py-3 text-sm font-bold text-primary-foreground shadow-glow"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
