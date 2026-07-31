@@ -163,9 +163,8 @@ function LandingPage() {
 
   return (
     <main className="min-h-screen bg-background text-foreground">
-
-
-      {/* Hero */}
+      <TopBar />
+      <FloatingFomo />      {/* Hero */}
       <section className="relative overflow-hidden px-4 pb-20 pt-14">
         <div
           aria-hidden
